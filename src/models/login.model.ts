@@ -6,7 +6,7 @@ const userSchema = new Schema(
     username: { type: String, require: true },
     password: { type: String, require: true },
     user_infor_base64: { type: String, require: true },
-    token: { type: String, default: "" },
+    token_nce: { type: String, default: "" },
   },
   { timestamps: true }
 );

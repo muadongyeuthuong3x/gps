@@ -6,6 +6,7 @@ import fs from "fs";
 import path from "path";
 import Database from "./database/db";
 import corsConfig from "./cors/serverCors";
+import router from "./routers/router";
 
 const app = express();
 
@@ -37,6 +38,9 @@ app.use(
 
 const PORT = process.env.PORT || 3000;
 const URL = process.env.MONGODB_URL ?? "";
+
+app.use(express.json());
+app.use('/api', router);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
