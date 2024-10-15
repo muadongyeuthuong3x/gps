@@ -7,6 +7,9 @@ import path from "path";
 import Database from "./database/db";
 import corsConfig from "./cors/serverCors";
 import router from "./routers/router";
+import scheduleJob  from "./queue/getAllSimAddData";
+import cron from 'node-cron'
+import newSimQueueProcess from "./queue/newSimSave"
 
 const app = express();
 
@@ -38,6 +41,15 @@ app.use(
 
 const PORT = process.env.PORT || 3000;
 const URL = process.env.MONGODB_URL ?? "";
+
+
+cron.schedule('* * * * *', async () => {
+  await scheduleJob();
+});
+
+cron.schedule('*/5 * * * *', async () => {
+  await newSimQueueProcess();
+});
 
 app.use(express.json());
 app.use('/api', router);

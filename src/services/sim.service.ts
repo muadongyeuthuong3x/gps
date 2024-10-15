@@ -6,19 +6,18 @@ import { banks } from "../enum";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import axios from "axios";
-import scheduleJob from "../queue/getAllSim";
 import { User } from "../types/express";
 import { fetchData } from "../fetchApi/fetchData";
 import SimSchema from "../models/sim.model";
 import { FetchDataItem, SimQuota } from "../types/sim.nce";
-import scheduleJobNewSim from "../queue/newSim";
+// import  scheduleJobNewSim  from "../queue/newSimSave";
 
 interface Login {
   username: string;
   password: string;
 }
 
-interface SimsVolumn {
+export interface SimsVolumn {
   sims: string[];
   bank: string;
   token_nce: string;
@@ -134,11 +133,6 @@ const SimService = {
       res.status(500).json({ message: error });
       return;
     }
-  },
-  saveNewSim: async (req: Request, res: Response): Promise<void> => {
-    const { token_nce: token } = req.user as User;
-    await scheduleJobNewSim(token);
-
   },
 };
 
