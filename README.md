@@ -1,3 +1,4 @@
+
 ## rate limit api 
  - https://help.1nce.com/dev-hub/reference/api-rate-limits
 
@@ -36,10 +37,10 @@
  
 
  ## run source code 
- **step 1 computer have redis
- **step 2 npm install
- **step 3 npm  run dev
- **step 4 
+ ### step 1 computer have redis
+ ### step 2 npm install
+ ### step 3 npm  run dev
+ ### step 4 
  OPEN POSTMAN and create data  use api 
   http://localhost:6268/api/register-information-1nce (method POST)
   {
