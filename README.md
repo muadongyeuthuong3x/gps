@@ -3,7 +3,36 @@
 
 ## token use web time max 30d
 
-## job get sim save data server (GET)
+## job get sim new save data server 
  - 5p/get 1 lan
- - http://localhost:6268/api/job-get-sim-new 
+ - when sim create save database will default quota in table 
  - token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmhDdW9uZyIsInRva2VuX25jZSI6IiIsImlhdCI6MTcyODg5MjYzNSwiZXhwIjoxNzMxNDg0NjM1fQ.3x2j6AusZJlr0BHtZ3WQE2hc7hdGwTbm9KTcuw_Flp4
+
+
+## job check add volumn every sim when setting sim have quota sim (setting) < quota sim get ve
+ - 1p/get 1 lan
+ - token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmhDdW9uZyIsInRva2VuX25jZSI6IiIsImlhdCI6MTcyODg5MjYzNSwiZXhwIjoxNzMxNDg0NjM1fQ.3x2j6AusZJlr0BHtZ3WQE2hc7hdGwTbm9KTcuw_Flp4
+
+
+## api register information 1nce (method POST)
+ - http://localhost:6268/api/register-information-1nce
+  {
+    "username": "username",
+    "password": "password"
+  }
+  - username và password is 1nce  provider
+
+## model have  collection USER and SIM
+ - collection USER (username , password , user_infor_base64 , token_nce)
+   -- username , password is 1nce provider
+   -- user_infor_base64 is base64(username:password) use get token_nce
+   -- token_nce use action api 1nce
+ - collection SIM (iccid , bank  , quota)
+   -- iccid is dentification sim
+   -- bank is bank add money (buy data sim)
+   -- quota is volumn setup when have datasim < quota will buy data
+
+## data fetch response api get informations sims 
+ https://help.1nce.com/dev-hub/reference/getsimsusingget
+ 
+ 

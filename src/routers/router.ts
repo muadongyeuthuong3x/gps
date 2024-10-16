@@ -4,8 +4,8 @@ import authenticateToken from "../middleware/auth";
 
 const router = Router();
 
-router.post('/register-information-1nce', authenticateToken , SimService.saveInformationSim);
-router.post('/add-volumn', authenticateToken , SimService.addVolumeInSims);
+router.post('/register-information-1nce' , SimService.saveInformationSim);
+// router.post('/add-volumn', authenticateToken , SimService.addVolumeInSims);
 router.post('/login', SimService.loginWeb);
 
 export default router;
