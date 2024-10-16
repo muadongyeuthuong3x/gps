@@ -6,12 +6,10 @@
 ## job get sim new save data server 
  - 5p/get 1 lan
  - when sim create save database will default quota in table 
- - token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmhDdW9uZyIsInRva2VuX25jZSI6IiIsImlhdCI6MTcyODg5MjYzNSwiZXhwIjoxNzMxNDg0NjM1fQ.3x2j6AusZJlr0BHtZ3WQE2hc7hdGwTbm9KTcuw_Flp4
 
 
 ## job check add volumn every sim when setting sim have quota sim (setting) < quota sim get ve
  - 1p/get 1 lan
- - token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbmhDdW9uZyIsInRva2VuX25jZSI6IiIsImlhdCI6MTcyODg5MjYzNSwiZXhwIjoxNzMxNDg0NjM1fQ.3x2j6AusZJlr0BHtZ3WQE2hc7hdGwTbm9KTcuw_Flp4
 
 
 ## api register information 1nce (method POST)
@@ -36,3 +34,17 @@
  https://help.1nce.com/dev-hub/reference/getsimsusingget
  
  
+
+ ## run source code 
+ step 1 computer have redis
+ step 2 npm install
+ step 3 npm  run dev
+ step 4 
+ OPEN POSTMAN and create data  use api 
+  http://localhost:6268/api/register-information-1nce (method POST)
+  {
+    "username": "username",
+    "password": "password"
+  }
+  - username và password is 1nce  provider
+  
