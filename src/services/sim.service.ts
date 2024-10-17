@@ -45,7 +45,6 @@ const SimService = {
         return;
       }
       const hashedPassword = await bcrypt.hash(password, saltRounds);
-     
 
       // Uncomment and implement this block if needed
       /*
@@ -86,25 +85,44 @@ const SimService = {
   },
   addVolumeInSims: async (data: any): Promise<void> => {
     const { sims, bank, token_nce } = data;
+
     if (!banks.includes(bank)) {
-      winstonLogger.error("addVolumeInSims errors : Bank not found");
+      winstonLogger.error("addVolumeInSims errors: Bank not found");
+      return;
     }
 
-    try {
-      const options = {
-        method: "OPTIONS",
-        url: `${process.env.NCE_TOKEN}/topup?payment_method=${bank}`,
-        headers: {
-          accept: "application/json",
-          authorization: `Bearer ${token_nce}`,
-          "content-type": "application/json",
-        },
-        data: sims,
-      };
-      const response = await axios(options);
-      winstonLogger.info("addVolumeInSims success :", { sims, bank });
-    } catch (error) {
-      winstonLogger.error("volumn :", error);
+    const maxRetries = 3;
+    let attempts = 0;
+    let success = false;
+
+    while (attempts < maxRetries && !success) {
+      try {
+        const options = {
+          method: "OPTIONS",
+          url: `${process.env.NCE_TOKEN}/topup?payment_method=${bank}`,
+          headers: {
+            accept: "application/json",
+            authorization: `Bearer ${token_nce}`,
+            "content-type": "application/json",
+          },
+          data: sims,
+        };
+        const response = await axios(options);
+        winstonLogger.info("addVolumeInSims success:", { sims, bank });
+        success = true;
+      } catch (error) {
+        attempts++;
+        winstonLogger.error(
+          "addVolumeInSims error on attempt",
+          attempts,
+          ":",
+          error
+        );
+      }
+    }
+
+    if (!success) {
+      winstonLogger.error("addVolumeInSims failed after 3 attempts");
     }
   },
   loginWeb: async (req: Request, res: Response): Promise<void> => {
@@ -135,11 +153,11 @@ const SimService = {
   },
 
   webHook: async (req: Request, res: Response): Promise<void> => {
-   const fetchData = listDataFetchWebhook;
-   await enqueueTasks(fetchData);
-   res.status(201).json({ message: "Success hook"});
-   return; 
-  }
+    const fetchData = listDataFetchWebhook;
+    await enqueueTasks(fetchData);
+    res.status(201).json({ message: "Success hook" });
+    return;
+  },
 };
 
 export const generateToken = (data: User) => {
