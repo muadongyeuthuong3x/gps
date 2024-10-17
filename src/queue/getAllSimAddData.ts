@@ -1,11 +1,12 @@
 import Queue from "bull";
 import axios from "axios";
-import { fetchData } from "../fetchApi/fetchData";
+import { listDataFetch } from "../fetchApi/fetchData";
 import winstonLogger from "../winston/winstonLogger";
 import SimSchema from "../models/sim.model";
 import SimService, { SimsVolumn } from "../services/sim.service";
-import { FetchDataItem, SimQuota } from "../types/sim.nce";
+import { FetchDataItem, SimCustom, SimQuota } from "../types/sim.nce";
 import UserSchema from "../models/login.model";
+import { banks } from "../enum";
 
 const getAllSimQueue = new Queue("all sim queue", {
   redis: {
@@ -14,11 +15,6 @@ const getAllSimQueue = new Queue("all sim queue", {
   },
 });
 
-
-
-interface simCustom  {
-  [quota: string] : SimQuota[];
-}
 
 
 getAllSimQueue.process(async (job: any, done: any) => {
@@ -35,23 +31,38 @@ getAllSimQueue.process(async (job: any, done: any) => {
     //   },
     // };
     // const response = await axios(options);
-    const fetchDataApi = fetchData;
+    const fetchDataApi : FetchDataItem[] = listDataFetch as FetchDataItem[];
     const quotaSim = await SimSchema.find({});
-    const listSimCustom : simCustom = {};
+    const listSimCustom : SimCustom = {};
+    if (quotaSim.length < 1) return;
     fetchDataApi.forEach((item) => {
-      const checkAddQouta : SimQuota   = getQuotaSim(item, quotaSim) as SimQuota;
-      if (checkAddQouta) {
-        const { quota  } = checkAddQouta;
-        if(!listSimCustom[quota]){
-          listSimCustom[quota] = [];
-        }else {
-          listSimCustom.quota.push(checkAddQouta)
-        }
-    }});
-    const valuesArray  = Object.values(listSimCustom) as unknown as SimsVolumn[];
-    for (const item of valuesArray) {
-       item.token_nce = token;
-       await SimService.addVolumeInSims(item);
+      const checkAddQouta: SimQuota = getQuotaSim(item, quotaSim) as SimQuota;
+      if (JSON.stringify(checkAddQouta) !== "{}") {
+        const { bank } = checkAddQouta;
+        if (!listSimCustom[bank]) {
+          listSimCustom[bank] = []; 
+        } 
+        listSimCustom[bank].push(checkAddQouta);
+      }
+    });
+     
+    for (const bank of banks) {
+      const item: any = {
+        sims: [],
+        bank: ""
+      };
+      item.token_nce = token;
+      if ( listSimCustom[bank] !== undefined && listSimCustom[bank].length > 1) {
+        const simsA : string[ ] = [];
+        listSimCustom[bank].map((e: SimQuota) => {
+          const { iccid } = e;
+          simsA.push(iccid);
+        });
+        item.bank = bank;
+        item.sims = simsA;
+        await SimService.addVolumeInSims(item);
+      }
+
     }
     done(); 
   } catch (error) {
@@ -60,21 +71,20 @@ getAllSimQueue.process(async (job: any, done: any) => {
   }
 });
 
-const getQuotaSim = (item : FetchDataItem , quotaSim : SimQuota[]) => {
+
+export const getQuotaSim = (item: FetchDataItem, quotaSim: SimQuota[]) => {
   let addQuota = {};
   const { iccid: iccidGet, current_quota } = item;
-  quotaSim.forEach((sim: SimQuota) => {
-    const { quota, iccid } = sim;
-    if (iccid == iccidGet) {
-      if (current_quota < quota) {
-        addQuota = sim;
+    quotaSim.forEach((sim: SimQuota) => {
+      const { quota, iccid } = sim;
+      if (iccid == iccidGet) {
+        if (current_quota < quota) {
+          addQuota = sim;
+        }
       }
-    }
-  });
-  return addQuota;
-};
-
-
+    });
+    return addQuota;
+  }
 
 
 const scheduleJob = async () => {

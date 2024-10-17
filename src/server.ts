@@ -42,12 +42,13 @@ app.use(
 const PORT = process.env.PORT || 3000;
 const URL = process.env.MONGODB_URL ?? "";
 
-
-cron.schedule('* * * * *', async () => {
+//*/5 * * * *
+cron.schedule('*/30 * * * * *', async () => {
   await scheduleJob();
 });
 
-cron.schedule('*/5 * * * *', async () => {
+// Chạy newSimQueueProcess mỗi 15 giây
+cron.schedule('*/15 * * * * *', async () => {
   await newSimQueueProcess();
 });
 

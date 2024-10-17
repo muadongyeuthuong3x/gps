@@ -7,10 +7,8 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import axios from "axios";
 import { User } from "../types/express";
-import { fetchData } from "../fetchApi/fetchData";
-import SimSchema from "../models/sim.model";
-import { FetchDataItem, SimQuota } from "../types/sim.nce";
-// import  scheduleJobNewSim  from "../queue/newSimSave";
+import { listDataFetchWebhook } from "../fetchWebHook/fetchDataWebHook";
+import enqueueTasks from "../queue/webHookQueue";
 
 interface Login {
   username: string;
@@ -47,7 +45,7 @@ const SimService = {
         return;
       }
       const hashedPassword = await bcrypt.hash(password, saltRounds);
-      let getToken1NCE = "";
+     
 
       // Uncomment and implement this block if needed
       /*
@@ -70,6 +68,7 @@ const SimService = {
       const user_infor_base64 = Buffer.from(`${username}:${password}`).toString(
         "base64"
       );
+      let getToken1NCE = user_infor_base64;
       const newUser = new UserSchema({
         username,
         password: hashedPassword,
@@ -85,7 +84,7 @@ const SimService = {
       res.status(500).json({ message: "Internal server error" });
     }
   },
-  addVolumeInSims: async (data: SimsVolumn): Promise<void> => {
+  addVolumeInSims: async (data: any): Promise<void> => {
     const { sims, bank, token_nce } = data;
     if (!banks.includes(bank)) {
       winstonLogger.error("addVolumeInSims errors : Bank not found");
@@ -134,6 +133,13 @@ const SimService = {
       return;
     }
   },
+
+  webHook: async (req: Request, res: Response): Promise<void> => {
+   const fetchData = listDataFetchWebhook;
+   await enqueueTasks(fetchData);
+   res.status(201).json({ message: "Success hook"});
+   return; 
+  }
 };
 
 export const generateToken = (data: User) => {

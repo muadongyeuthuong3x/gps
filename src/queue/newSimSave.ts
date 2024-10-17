@@ -1,7 +1,7 @@
-import { fetchData } from "../fetchApi/fetchData";
+import { listDataFetch } from "../fetchApi/fetchData";
 import UserSchema from "../models/login.model";
 import SimSchema from "../models/sim.model";
-import { SimQuota } from "../types/sim.nce";
+import { FetchDataItem, SimQuota } from "../types/sim.nce";
 import Queue from "bull";
 
 const newSimQueue = new Queue("new sim", {
@@ -18,8 +18,8 @@ newSimQueue.process(async (job: any, done: any) => {
     const getAllSim = await SimSchema.find({});
     const lengthAllSim = getAllSim.length;
     const listSimNew: string[] = [];
-    const fetchDataApi = fetchData;
-    fetchDataApi.forEach((item) => {
+    const fetchDataApi = listDataFetch;
+    fetchDataApi.forEach((item: FetchDataItem) => {
       const { iccid } = item;
       if (lengthAllSim < 1) {
         listSimNew.push(iccid);

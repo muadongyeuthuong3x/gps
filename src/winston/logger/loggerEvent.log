@@ -22,3 +22,260 @@
 2024-10-15T01:04:16.288Z [[31merror[39m]: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
 2024-10-15T02:00:01.934Z [[31merror[39m]: Error job getInformation all SIm: Request failed with status code 400
 2024-10-15T02:31:00.399Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:21:01.021Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:22:01.029Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:23:01.050Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:24:01.084Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:25:00.126Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:26:00.174Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:27:00.219Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:28:00.259Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:29:00.293Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:30:00.337Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:31:00.378Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:32:00.412Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:33:00.459Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:34:00.501Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:35:00.534Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:36:00.584Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:37:00.629Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:38:00.677Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:39:00.725Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:40:00.758Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:41:00.801Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:42:00.829Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:43:00.861Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:44:00.439Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:51:00.557Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:56:00.370Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:57:00.475Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T01:59:00.797Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T02:01:00.476Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T02:02:00.499Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'push')
+2024-10-17T02:03:00.571Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:03:00.991Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:04:00.607Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:04:01.440Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:05:00.280Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:05:00.814Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:06:00.313Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:06:00.664Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:07:00.339Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:07:01.154Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:08:00.170Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:08:00.990Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:09:00.186Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:09:00.563Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:14:19.375Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:14:20.178Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:14:20.239Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:14:20.918Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:14:55.266Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:14:56.087Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:15:00.944Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:15:01.625Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:18:31.001Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:18:31.844Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:19:01.006Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:19:01.753Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:20:01.531Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:20:03.499Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:21:00.880Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:21:01.695Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:21:30.864Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:21:31.641Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:22:00.834Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:22:01.665Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:22:30.285Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:22:31.048Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:23:00.289Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:23:01.241Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:23:30.317Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:23:30.658Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:24:00.346Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:24:00.687Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:24:30.352Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:24:31.201Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:25:00.372Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:25:01.194Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:25:30.381Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:25:31.103Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:32.481Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:33.158Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:33.838Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:34.520Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:35.199Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:35.879Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:36.563Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:36.799Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:37.478Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:28:37.714Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:01.130Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:01.375Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:02.057Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:02.735Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:03.414Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:03.649Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:04.329Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:05.008Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:05.687Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:34:06.365Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:01.258Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:01.494Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:02.175Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:02.858Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:03.094Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:03.775Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:04.455Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:05.142Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:05.824Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:35:06.069Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:56:01.134Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T02:57:00.854Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T02:57:30.542Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:57:31.417Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:57:31.421Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T02:58:30.635Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:58:31.036Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:58:31.040Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T02:59:00.636Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T02:59:01.429Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T02:59:01.430Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T02:59:30.628Z [[31merror[39m]: addVolumeInSims errors : Bank not found
+2024-10-17T03:01:00.680Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:01:00.684Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T03:01:31.132Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:01:31.133Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T03:02:01.522Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:02:01.526Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T03:02:31.452Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:02:31.453Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T03:03:01.075Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:03:01.076Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T03:03:31.795Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:03:31.799Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T03:04:01.921Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:04:01.923Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T03:08:30.865Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:08:30.870Z [[31merror[39m]: Error job getInformation all SIm: Cannot read properties of undefined (reading 'length')
+2024-10-17T03:09:01.767Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:09:31.939Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:10:01.734Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:11:01.709Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:11:20.752Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:12:01.625Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:12:31.800Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:13:01.262Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:13:31.703Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:14:01.232Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:14:31.700Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:15:01.785Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:15:31.420Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:16:01.735Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:16:31.907Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:17:01.807Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:17:31.302Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:18:01.380Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:18:31.787Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:19:01.403Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:19:30.422Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:20:00.833Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:20:31.010Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:21:00.455Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:21:30.461Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:22:01.030Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:22:30.492Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:23:00.588Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:23:31.014Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:24:00.784Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:24:30.602Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:25:01.010Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:25:31.099Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:26:01.031Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:26:31.119Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:27:00.653Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:27:30.726Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:28:00.698Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:28:31.466Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:29:01.178Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:29:31.249Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:30:00.773Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:30:30.841Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:31:01.255Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:31:31.338Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:32:01.071Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:32:30.976Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:33:00.961Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:33:30.969Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:34:01.403Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:34:31.464Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:35:01.541Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:35:31.084Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:36:01.059Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:36:31.120Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:37:01.108Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:37:31.680Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:38:01.574Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:39:01.426Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:39:31.096Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:42:01.250Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:42:31.194Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:31.091Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:52.309Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:53.057Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:53.802Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:54.542Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:55.366Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:56.636Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:56.933Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:57.925Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:43:59.369Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:00.369Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:01.359Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:01.658Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:02.399Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:02.932Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:04.378Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:05.373Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:06.638Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:14.072Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:18.624Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:19.551Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:20.548Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:21.540Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:44:22.538Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:45:01.102Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:45:10.004Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:45:30.618Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:45:58.606Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:45:58.909Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:46:01.187Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:46:31.261Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:47:01.293Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:48:01.006Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:50:00.482Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:52:01.780Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:52:30.846Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:53:00.921Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:53:31.305Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:54:01.351Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:54:30.921Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:55:01.561Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:55:31.633Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:56:01.742Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:57:01.679Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:58:01.105Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:58:30.953Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:59:01.450Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T03:59:30.994Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T04:00:01.540Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T04:01:01.836Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T04:01:42.909Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T04:02:01.069Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T06:44:31.289Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T06:50:00.991Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T06:51:01.357Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T06:53:25.339Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T06:53:31.164Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T06:56:20.345Z [[32minfo[39m]: addVolumeInSims success :
+2024-10-17T06:56:23.873Z [[32minfo[39m]: addVolumeInSims success :

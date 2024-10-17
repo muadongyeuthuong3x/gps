@@ -1,7 +1,10 @@
+import { banks } from "../enum";
+
 export interface SimQuota {
     iccid: string;
     quota: number;
     bank : string;
+    token_nce?: string;
   }
   
   export interface QuotaStatus {
@@ -28,4 +31,11 @@ export interface SimQuota {
     current_quota_SMS: number;
     quota_status_SMS: QuotaStatus;
     label: string;
+  }
+  
+  type BankType = typeof banks[number];
+
+  
+  export type SimCustom = {
+    [key in BankType]: SimQuota[];
   }
