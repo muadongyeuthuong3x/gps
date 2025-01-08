@@ -1,6 +1,5 @@
 name: CICD
 
-
 on:
   push:
     branches: [ "abc" ]
@@ -19,7 +18,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Sửa lại đây
     steps:
       - name: Pull image from docker hub
         run: docker pull manhcuong99/gps:latest
