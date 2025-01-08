@@ -41,6 +41,7 @@ app.use(
 
 const PORT = process.env.PORT || 3000;
 const URL = process.env.MONGODB_URL ?? "";
+console.log(2222222222222, PORT , URL)
 
 //*/5 * * * *
 cron.schedule('*/30 * * * * *', async () => {

@@ -50,3 +50,4 @@
  
  
 
+sudo docker exec -it gps_container sh ==> sh xem thu muc

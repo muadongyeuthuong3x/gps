@@ -8,6 +8,8 @@ router.post('/register-information-1nce' , SimService.saveInformationSim);
 // router.post('/add-volumn', authenticateToken , SimService.addVolumeInSims);
 router.post('/login', SimService.loginWeb);
 
+router.get('/get', SimService.getInformation);
+
 router.post('/weeb-hook', SimService.webHook);
 
 export default router;

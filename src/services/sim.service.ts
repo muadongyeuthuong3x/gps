@@ -3,7 +3,7 @@ import loginSchema from "../validator/login.validator";
 import UserSchema from "../models/login.model";
 import winstonLogger from "../winston/winstonLogger";
 import { banks } from "../enum";
-import bcrypt from "bcrypt";
+const bcrypt = require('bcryptjs');
 import jwt from "jsonwebtoken";
 import axios from "axios";
 import { User } from "../types/express";
@@ -83,6 +83,9 @@ const SimService = {
       res.status(500).json({ message: "Internal server error" });
     }
   },
+  getInformation: async(req: Request, res: Response): Promise<void> => {
+    res.status(201).json({ message: "Success hook" });
+  },  
   addVolumeInSims: async (data: any): Promise<void> => {
     const { sims, bank, token_nce } = data;
 
