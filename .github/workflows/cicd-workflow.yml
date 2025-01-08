@@ -1,11 +1,10 @@
-name: CICD
-
 on:
   push:
     branches: [ "abc" ]
 
 jobs:
   build:
+    runs-on: ubuntu-latest  # Add this line to specify the environment for the build job
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
@@ -18,7 +17,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest  # Sửa lại đây
+    runs-on: ubuntu-latest  # This is correct, no changes needed here
     steps:
       - name: Pull image from docker hub
         run: docker pull manhcuong99/gps:latest
