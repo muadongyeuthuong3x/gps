@@ -4,24 +4,41 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Add this line to specify the environment for the build job
+    runs-on: ubuntu-latest  # Or use ubuntu-24.04 for testing
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
-      - name: Login to docker hub
-        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-      - name: Build docker image
-        run: docker build -t manhcuong99/gps .
-      - name: Publish image to docker hub
-        run: docker push manhcuong99/gps:latest
+
+      - name: Login to Docker Hub
+        run: |
+          echo "Logging in to Docker Hub..."
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build Docker image
+        run: |
+          echo "Building Docker image..."
+          docker build -t manhcuong99/gps .
+          
+      - name: Publish image to Docker Hub
+        run: |
+          echo "Pushing Docker image to Hub..."
+          docker push manhcuong99/gps:latest
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest  # This is correct, no changes needed here
+    runs-on: ubuntu-latest  # Or specify ubuntu-24.04 for testing
     steps:
-      - name: Pull image from docker hub
-        run: docker pull manhcuong99/gps:latest
+      - name: Pull image from Docker Hub
+        run: |
+          echo "Pulling image from Docker Hub..."
+          docker pull manhcuong99/gps:latest
+
       - name: Delete old container
-        run: docker rm -f gps-container
-      - name: Run docker container
-        run: docker run -d -p 6268:6268 --name gps-container manhcuong99/gps
+        run: |
+          echo "Deleting old container..."
+          docker rm -f gps-container
+
+      - name: Run Docker container
+        run: |
+          echo "Running Docker container..."
+          docker run -d -p 6268:6268 --name gps-container manhcuong99/gps
