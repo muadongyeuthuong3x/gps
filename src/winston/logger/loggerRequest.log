@@ -91,3 +91,5 @@
 ::ffff:172.20.0.1 - - [07/Jan/2025:04:18:21 +0000] "GET /api/get HTTP/1.1" 201 26 "-" "PostmanRuntime/7.43.0"
 ::ffff:172.20.0.1 - - [07/Jan/2025:04:18:22 +0000] "GET /api/get HTTP/1.1" 201 26 "-" "PostmanRuntime/7.43.0"
 ::ffff:172.20.0.1 - - [07/Jan/2025:04:18:24 +0000] "GET /api/get HTTP/1.1" 201 26 "-" "PostmanRuntime/7.43.0"
+::ffff:172.20.0.1 - - [08/Jan/2025:04:26:25 +0000] "GET /api/get HTTP/1.1" 201 26 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+::ffff:172.20.0.1 - - [08/Jan/2025:04:26:25 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:6268/api/get" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
