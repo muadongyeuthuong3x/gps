@@ -1,0 +1,29 @@
+name: CICD
+
+
+on:
+  push:
+    branches: [ "abc" ]
+
+jobs:
+  build:
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Login to docker hub
+        run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build docker image
+        run: docker build -t manhcuong99/gps .
+      - name: Publish image to docker hub
+        run: docker push manhcuong99/gps:latest
+
+  deploy:
+    needs: build
+    runs-on: [ip-172-31-10-147] 
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull manhcuong99/gps:latest
+      - name: Delete old container
+        run: docker rm -f gps-container
+      - name: Run docker container
+        run: docker run -d -p 6268:6268 --name gps-container manhcuong99/gps
