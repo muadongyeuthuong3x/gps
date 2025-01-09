@@ -16,6 +16,11 @@ COPY . .
 # Cài đặt thư viện thêm nếu cần
 RUN npm install --save @types/bcryptjs
 
+RUN npm install ts-node --save-dev
+
+RUN npm install typescript --save-dev
+
+
 # Mở cổng cho ứng dụng Node.js
 EXPOSE 6268
 
