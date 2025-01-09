@@ -4,7 +4,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, linux, x64]
+    runs-on: [self-hosted, linux, x64]  # Ensure your runner has the correct labels
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
@@ -26,7 +26,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [self-hosted, linux, x64]
+    runs-on: [self-hosted, linux, x64]  # Ensure your runner has the correct labels
     steps:
       - name: Pull image from Docker Hub
         run: |
