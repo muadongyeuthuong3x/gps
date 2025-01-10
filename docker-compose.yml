@@ -1,45 +1,3 @@
-# version: '3.9'
-# services:
-#   mongodb:
-#     image: mongo:6
-#     container_name: mongodb
-#     ports:
-#       - "27017:27017"
-#     environment:
-#       MONGO_INITDB_ROOT_USERNAME: admin
-#       MONGO_INITDB_ROOT_PASSWORD: adminpassword
-#     volumes:
-#       - mongodb_data:/data/db
-
-#   redis:
-#     image: redis:7
-#     container_name: redis
-#     ports:
-#       - "6379:6379"
-
-#   app:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile
-#     container_name: node_app
-#     ports:
-#       - "6268:6268"
-#     depends_on:
-#       - mongodb
-#       - redis
-#     environment:
-#       MONGODB_URL: mongodb://admin:adminpassword@mongodb:27017  # Sửa tại đây
-#       REDIS_HOST: redis
-#       REDIS_PORT: 6379
-#     volumes:
-#       - .:/app
-#       - /app/node_modules
-#     command: npm start
-
-# volumes:
-#   mongodb_data:
-
-
 version: '3.9'
 
 services:
@@ -53,12 +11,16 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: adminpassword
     volumes:
       - mongodb_data:/data/db
+    networks:
+      - app-network
 
   redis:
     image: redis:7
     container_name: redis
     ports:
       - "6379:6379"
+    networks:
+      - app-network
 
   app:
     build:
@@ -74,10 +36,15 @@ services:
       MONGODB_URL: mongodb://admin:adminpassword@mongodb:27017
       REDIS_HOST: redis
       REDIS_PORT: 6379
-    # Đảm bảo không cần volume cho node_modules
     volumes:
       - .:/app
     command: npm start
+    networks:
+      - app-network
 
 volumes:
   mongodb_data:
+
+networks:
+  app-network:
+    driver: bridge
