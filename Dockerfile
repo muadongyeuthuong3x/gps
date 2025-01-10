@@ -1,31 +1,23 @@
-# Sử dụng Node.js Alpine LTS version để giảm kích thước container
-FROM node:18-alpine
+# Sử dụng Node.js 18
+FROM node:18
 
-# Cài đặt thư mục làm việc
+# Tạo thư mục làm việc
 WORKDIR /app
 
-# Sao chép package.json và package-lock.json trước để tận dụng Docker cache
+# Copy package.json và package-lock.json vào container
 COPY package*.json ./
 
 # Cài đặt dependencies
-RUN npm ci
+RUN npm install
 
-# Sao chép toàn bộ mã nguồn vào container
+# Copy tất cả mã nguồn vào container
 COPY . .
 
-# Cài đặt thư viện thêm nếu cần
-RUN npm install --save @types/bcryptjs
-
-RUN npm install -g typescript
-
-RUN npm install --save-dev @types/node
-
+# Build ứng dụng TypeScript
 RUN npm run build
 
-
-
-# Mở cổng cho ứng dụng Node.js
+# Mở port mà ứng dụng đang lắng nghe
 EXPOSE 6268
 
-# Chạy ứng dụng
-CMD ["npm", "run", "start"]
+# Lệnh chạy ứng dụng
+CMD ["npm", "start"]

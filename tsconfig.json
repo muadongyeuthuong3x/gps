@@ -1,20 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES2020",                 // Phiên bản ECMAScript đích đến
-    "module": "commonjs",               // Kiểu module sử dụng trong Node.js
-    "moduleResolution": "node",         // Cách thức giải quyết các import
-    "outDir": "./dist",                 // Đường dẫn nơi mã biên dịch sẽ được lưu
-    "esModuleInterop": true,            // Tạo khả năng tương thích với import/export của ES module
-    "skipLibCheck": true,               // Bỏ qua kiểm tra các kiểu trong thư viện
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,                     // Kích hoạt tất cả các kiểm tra nghiêm ngặt
-    "resolveJsonModule": true,          // Cho phép import các file JSON
-    "noImplicitAny": true               // Ngăn cấm sử dụng kiểu "any" nếu không khai báo rõ ràng
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src/**/*.ts"                        // Bao gồm tất cả file .ts trong thư mục src
-  ],
-  "exclude": [
-    "node_modules"                       // Loại trừ thư mục node_modules
+    "src/**/*.ts"
   ]
 }

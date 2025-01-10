@@ -1,10 +1,10 @@
 on:
   push:
-    branches: [ "abc" ]
+    branches: [ "abc" ]  # Quy trình sẽ chạy khi có push lên nhánh abc
 
 jobs:
   build:
-    runs-on: [self-hosted, linux, x64]  # Ensure your runner has the correct labels
+    runs-on: [self-hosted, linux, x64]
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "Building Docker image..."
           docker build -t manhcuong99/gps .
-          
+
       - name: Publish image to Docker Hub
         run: |
           echo "Pushing Docker image to Hub..."
@@ -26,19 +26,41 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [self-hosted, linux, x64]  # Ensure your runner has the correct labels
+    runs-on: [self-hosted, linux, x64]
     steps:
       - name: Pull image from Docker Hub
         run: |
           echo "Pulling image from Docker Hub..."
           docker pull manhcuong99/gps:latest
 
-      - name: Delete old container
+      - name: Set up Docker Compose
         run: |
-          echo "Deleting old container..."
-          docker rm -f gps-container
+          echo "Setting up Docker Compose..."
+          echo "version: '3.9'
+          services:
+            mongodb:
+              image: mongo:6
+              container_name: mongodb
+              environment:
+                MONGO_INITDB_ROOT_USERNAME: admin
+                MONGO_INITDB_ROOT_PASSWORD: adminpassword
+              ports:
+                - '27017:27017'
+            redis:
+              image: redis:7
+              container_name: redis
+              ports:
+                - '6379:6379'
+            gps:
+              image: manhcuong99/gps:latest
+              container_name: gps-container
+              ports:
+                - '6268:6268'
+              depends_on:
+                - mongodb
+                - redis" > docker-compose.yml
 
-      - name: Run Docker container
+      - name: Run Docker Compose to deploy
         run: |
-          echo "Running Docker container..."
-          docker run -d -p 6268:6268 --name gps-container manhcuong99/gps
+          echo "Starting up all containers..."
+          docker-compose up -d
