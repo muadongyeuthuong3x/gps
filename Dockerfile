@@ -16,6 +16,8 @@ COPY . .
 # Cài đặt thư viện thêm nếu cần
 RUN npm install --save @types/bcryptjs
 
+RUN npm install -g typescript
+
 RUN npm run build
 
 
