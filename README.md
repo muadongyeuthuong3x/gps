@@ -51,3 +51,9 @@
  
 
 sudo docker exec -it gps_container sh ==> sh xem thu muc
+
+curl -fsSl https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+
+sudo apt-get install -y nginx
+
+cd /etc/nginx/sites-available

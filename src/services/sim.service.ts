@@ -84,7 +84,7 @@ const SimService = {
     }
   },
   getInformation: async(req: Request, res: Response): Promise<void> => {
-    res.status(201).json({ message: "manh cuong" });
+    res.status(201).json({ message: "manh cuong cicde" });
   },  
   addVolumeInSims: async (data: any): Promise<void> => {
     const { sims, bank, token_nce } = data;
