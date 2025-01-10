@@ -158,7 +158,7 @@ const SimService = {
   webHook: async (req: Request, res: Response): Promise<void> => {
     const fetchData = listDataFetchWebhook;
     await enqueueTasks(fetchData);
-    res.status(201).json({ message: "Success hook" });
+    res.status(201).json({ message: "Success shook" });
     return;
   },
 };
