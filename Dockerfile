@@ -18,7 +18,10 @@ RUN npm install --save @types/bcryptjs
 
 RUN npm install -g typescript
 
+RUN npm install --save-dev @types/node
+
 RUN npm run build
+
 
 
 # Mở cổng cho ứng dụng Node.js
