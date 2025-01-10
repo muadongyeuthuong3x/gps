@@ -60,6 +60,11 @@ jobs:
                 - mongodb
                 - redis" > docker-compose.yml
 
+      - name: Stop and remove old containers
+        run: |
+          echo "Stopping and removing old containers..."
+          docker-compose down
+
       - name: Run Docker Compose to deploy
         run: |
           echo "Starting up all containers..."
